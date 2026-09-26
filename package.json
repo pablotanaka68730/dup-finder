@@ -1,0 +1,17 @@
+{
+  "name": "dup-finder",
+  "version": "0.1.0",
+  "description": "Detect duplicate files via size check before hashing.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
