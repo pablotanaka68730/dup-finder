@@ -1,6 +1,6 @@
 {
   "name": "dup-finder",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Detect duplicate files via size check before hashing.",
   "type": "module",
   "main": "src/index.js",
