@@ -28,3 +28,10 @@ The fingerprint used is FNV-1a, not a cryptographic hash. It only needs to disti
 - Symlinks are ignored. A symlink pointing at a file is a link, not a copy, and following it would risk cycles.
 - Unreadable directories and files are skipped, not fatal. A permission error on one subtree will not abort the whole scan.
 - The scan is synchronous in the sense that it walks one tree at a time; there is no parallelism. This keeps memory bounded and behaviour deterministic.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
